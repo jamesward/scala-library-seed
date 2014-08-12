@@ -47,21 +47,25 @@ git commit -m init</code></pre>
             </li>
             <li>
                 Publish your library:
-                <pre><code>activator publish</code></pre>
+                <pre><code>activator +bintray::publish</code></pre>
+                Note: The <code>+</code> publishes the cross-versioned (e.g. Scala 2.10 & 2.11) builds.
             </li>
         </ol>
     </p>
 
     <p>
-        To enable others to use your library you can either have them add a new resolver / repository to their build or you can add your library to Maven Central via jCenter.  TODO?
+        To enable others to use your library you can either have them add a new resolver / repository to their build or you can <a href="http://blog.bintray.com/2014/02/11/bintray-as-pain-free-gateway-to-maven-central/" target="_blank">add your library to Maven Central via jCenter</a>.  For the former option do:
 
         For your sbt users have them add the following to their build.sbt:
-        TODO
+        <pre><code>resolvers += "YOUR_BINTRAY_USERNAME" at "http://dl.bintray.com/content/YOUR_BINTRAY_USERNAME/maven"</code></pre>
 
         For Maven users have them add:
-        TODO
-
-        To add your library to jCenter BLAH BLAH.
+        <pre><code>&lt;repositories&gt;
+    &lt;repository&gt;
+        &lt;id&gt;YOUR_BINTRAY_USERNAME&lt;/id&gt;
+        &lt;url&gt;http://dl.bintray.com/content/YOUR_BINTRAY_USERNAME/maven&lt;/url&gt;
+    &lt;/repository&gt;
+&lt;/repositories&gt;</code></pre>
 
     </p>
 </div>
