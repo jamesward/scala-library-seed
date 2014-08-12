@@ -1,0 +1,69 @@
+<html>
+<head>
+    <title>Scala Library Seed</title>
+</head>
+<body>
+<div>
+    <h2>Project Layout</h2>
+
+    <p>
+        <a href="#code/build.sbt" class="shortcut">build.sbt</a> - The sbt build definition<br/><br/>
+        <a href="#code/project/build.properties" class="shortcut">project/build.properties</a> - Defines the sbt version<br/><br/>
+        <a href="#code/project/plugins.sbt" class="shortcut">project/plugins.sbt</a> - The sbt plugin definitions<br/><br/>
+        <a href="#code/src/main/scala/com/example/Foo.scala" class="shortcut">src/main/scala/com/example/Foo.scala</a> - An example Scala source<br/><br/>
+        <a href="#code/src/test/scala/com/example/FooSpec.scala" class="shortcut">src/test/scala/com/example/FooSpec.scala</a> - And example Scala test
+    </p>
+</div>
+<div>
+    <h2>Running Tests</h2>
+
+    <p>
+        Run tests either from the Activator UI or via the command line.  From the command line re-run all tests automatically on file change with:
+        <pre><code>activator ~test</code></pre>
+    </p>
+</div>
+<div>
+    <h2>Publish Library</h2>
+
+    <p>
+        This project bases its version on information from git.  So you will need to initialize a git repo (if you don't already have one):
+        <pre><code>git init</code></pre>
+
+        Then add your files and commit them:
+        <pre><code>git add .
+git commit -m init</code></pre>
+
+        If your current commit is associated with a git tag then the tag will be used to generate a version number.  Otherwise the version is associated with the current commit hash.
+    </p>
+
+    <p>
+        The easiest way to publish your library to a public repository is with <a href="https://bintray.com/" target="_blank">BinTray</a>.  To publish your library to BinTray follow these steps:
+        <ol>
+            <li><a href="https://bintray.com/signup/email" target="_blank">Create a BinTray account</a></li>
+            <li>In BinTray get your API Key from <a href="https://bintray.com/profile/edit" target="_blank">your profile page</a></li>
+            <li>
+                From the command line login to BinTray:
+                <pre><code>activator bintray::changeCredentials</code></pre>
+            </li>
+            <li>
+                Publish your library:
+                <pre><code>activator publish</code></pre>
+            </li>
+        </ol>
+    </p>
+
+    <p>
+        To enable others to use your library you can either have them add a new resolver / repository to their build or you can add your library to Maven Central via jCenter.  TODO?
+
+        For your sbt users have them add the following to their build.sbt:
+        TODO
+
+        For Maven users have them add:
+        TODO
+
+        To add your library to jCenter BLAH BLAH.
+
+    </p>
+</div>
+</body>
+</html>
